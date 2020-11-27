@@ -1,0 +1,23 @@
+<h1>Cocktails</h1>
+
+
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li>
+    <%= link_to cocktail.name, cocktail_path(cocktail)  %>
+    
+    <%# # <input type="checkbox"><%= task.title  %>
+    <%# <%= link_to "Delete", restaurant_path(restaurant), method: :delete, data: { confirm: "Delete #{restaurant.name}?"} %>
+    <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Delete #{cocktail.name}?"} do %>
+  <%= image_tag("https://img.icons8.com/carbon-copy/100/000000/delete-forever--v1.png", class: "small")  %>
+<% end %>
+
+
+
+   
+    </li>
+ <% end %>
+
+</ul>
+
+<%= link_to "+ Create new cocktail", new_cocktail_path %>

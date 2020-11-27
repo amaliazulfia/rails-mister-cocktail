@@ -1,0 +1,16 @@
+<h1>Edit the reto</h1>
+<p>Find me in app/views/restaurants/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <%= simple_form_for  @restaurant  do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <%= f.input :category %>
+        <%= f.submit "create resto", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
